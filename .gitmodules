@@ -1,0 +1,12 @@
+[submodule "riscv-isa-sim"]
+	path = riscv-isa-sim
+	url = https://github.com/philippuk/riscv-isa-sim.git
+[submodule "riscv-pk"]
+	path = riscv-pk
+	url = https://github.com/riscv-software-src/riscv-pk.git
+[submodule "Forvis_RISCV-ISA-Spec"]
+	path = Forvis_RISCV-ISA-Spec
+	url = https://github.com/rsnikhil/Forvis_RISCV-ISA-Spec.git
+[submodule "sail-riscv"]
+	path = sail-riscv
+	url = https://github.com/riscv/sail-riscv.git
