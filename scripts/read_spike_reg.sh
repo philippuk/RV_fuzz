@@ -67,5 +67,5 @@ if [ $return_code -eq 255 ]; then
     # Overwrite the original file with the modified content
     mv "$tmp_file" "$log_file"
 elif [ $return_code != 0 ]; then
-    echo "SPIKE: Timeout"
+    echo "SPIKE: Crash / Timeout"
 fi

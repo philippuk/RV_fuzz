@@ -27,6 +27,12 @@ while : ; do
   sleep 1  # Adjust the sleep duration as needed
 done
 
+return_code=$?
+
+if [ $return_code != 0 ]; then
+    echo "SAIL: Crash / Timeout"
+fi
+
 cut_file()
 {
   # Create a temporary file to store the modified content

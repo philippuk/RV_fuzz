@@ -8,6 +8,12 @@ log_file="rvemu_reg_output.txt"
 
 ./rvemu/target/release/rvemu-cli -k rvemu_input.text > "$log_file"
 
+return_code=$?
+
+if [ $return_code != 0 ]; then
+    echo "RVEMU: Crash / Timeout"
+fi
+
 mcause=$(grep "mcause" "$log_file" | awk -F'=' '{print $2}' | awk '{print $1}')
 
 if [ "$mcause" == "0x1" ]; then

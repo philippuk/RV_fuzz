@@ -12,6 +12,12 @@ log_file="forvis_reg_output.txt"
 
 ./forvis_exe  --arch RV64IMAFDC  --tohost --verbosity=2  --n 10000 ./boot_ROM_RV64.hex32 ./forvis_input | grep -A 27 $end_pc_hex | head -n 28 > "$log_file"
 
+return_code=$?
+
+if [ $return_code != 0 ]; then
+    echo "FORVIS: Crash / Timeout"
+fi
+
 if [ ! -s "$log_file" ]; then
     echo "FORVIS: Did not reach the end of program."
     ./forvis_exe  --arch RV64IMAFDC  --tohost --verbosity=2  --n 10000 ./boot_ROM_RV64.hex32 ./forvis_input | grep -A 27 'inum:[0-9]*' | tail -n 28 > "$log_file"
