@@ -1,6 +1,6 @@
 # RV_fuzz: A RISC-V fuzzer 
 
-**Files are reorganized for display purpose. Hence, the paths in the files are incorrect**
+**Files are reorganized for display purpose. Hence, the paths in the files may not be correct**
 
 Implementation tested are provided as submodule in the repo.
 
